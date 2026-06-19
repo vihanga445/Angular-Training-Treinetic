@@ -1,0 +1,15 @@
+<div class="card mt-3">
+  <div class="card-header bg-primary text-white">
+    <h3>Todo Item Detail View</h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">Viewing item data for ID: <strong>{{ todoId }}</strong></p>
+    
+    <div *ngIf="editMode" class="alert alert-info">
+      <p class="mb-0"><strong> Query Parameter Testing:</strong> 
+    </div>
+
+    <hr>
+    <a routerLink="/todos" class="btn btn-secondary">Back to List</a>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+<div class="row justify-content-center mt-5">
+  <div class="col-md-4">
+    <div class="card shadow-sm">
+      <div class="card-header bg-dark text-white text-center">
+        <h4>System Login</h4>
+      </div>
+
+      <div class="card-body p-4">
+        <div
+          *ngIf="errorMessage"
+          class="alert alert-danger text-center p-2 small"
+        >
+          {{ errorMessage }}
+        </div>
+
+        <form (ngSubmit)="onLogin()">
+          <div class="mb-3">
+            <label class="form-label small fw-bold">Username</label>
+            <input
+              type="text"
+              [(ngModel)]="username"
+              name="username"
+              class="form-control"
+              placeholder="Enter username"
+              required
+            />
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label small fw-bold">Password</label>
+            <input
+              type="password"
+              [(ngModel)]="password"
+              name="password"
+              class="form-control"
+              placeholder="Enter password"
+              required
+            />
+          </div>
+
+          <button
+            type="submit"
+            [disabled]="!username.trim() || !password.trim()"
+            class="btn btn-primary w-100 py-2"
+          >
+            Log In & Open Dashboard
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
