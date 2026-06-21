@@ -35,10 +35,12 @@ export class TodoAddComponent {
       return;
     }
 
-    const todo: Todo = {
-      id: 0,
-      ...this.form.value,
-    };
+    const todo = new Todo(
+      '',
+      this.form.value.title,
+      this.form.value.description,
+      this.form.value.completed,
+    );
 
     this.todoService.addTodo(todo).subscribe({
       next: () => {
