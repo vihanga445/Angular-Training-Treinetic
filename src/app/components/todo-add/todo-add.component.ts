@@ -35,12 +35,14 @@ export class TodoAddComponent {
       return;
     }
 
-    const todo = new Todo(
+    const todo: Todo = new Todo(
       '',
       this.form.value.title,
       this.form.value.description,
       this.form.value.completed,
     );
+
+    console.log(todo);
 
     this.todoService.addTodo(todo).subscribe({
       next: () => {

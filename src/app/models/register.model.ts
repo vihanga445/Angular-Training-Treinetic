@@ -1,10 +1,3 @@
-// export interface RegisterModel {
-//   name: string;
-//   email: string;
-//   password: string;
-//   agree: boolean;
-// }
-
 export class RegisterModel {
   constructor(
     public name: string,

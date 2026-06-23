@@ -48,10 +48,12 @@ export class TodoDetailComponent {
   save(): void {
     if (!this.todoId || this.form.invalid) return;
 
-    const updated: Todo = {
-      id: this.todoId,
-      ...this.form.value,
-    };
+    const updated: Todo = new Todo(
+      this.todoId,
+      this.form.value.title,
+      this.form.value.description,
+      this.form.value.completed,
+    );
 
     this.todoService.updateTodo(this.todoId, updated).subscribe({
       next: () => {

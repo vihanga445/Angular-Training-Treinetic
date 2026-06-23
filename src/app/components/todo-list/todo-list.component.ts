@@ -29,7 +29,9 @@ export class TodoListComponent {
     });
   }
 
-  remove(id: string) {
+  submit(): void {}
+
+  remove(id: string): void {
     this.todoService.deleteTodo(id).subscribe({
       next: () => {
         this.todosList = this.todosList.filter((t) => t.id !== id);

@@ -4,12 +4,10 @@
   </div>
 
   <div class="card-body">
-    <!-- Loading State -->
     <div *ngIf="!todo">
       <p>Loading todo...</p>
     </div>
 
-    <!-- VIEW MODE -->
     <div *ngIf="todo && !editMode">
       <p><strong>ID:</strong> {{ todo.id }}</p>
       <p><strong>Title:</strong> {{ todo.title }}</p>
@@ -31,7 +29,6 @@
       </a>
     </div>
 
-    <!-- EDIT MODE -->
     <form
       *ngIf="todo && editMode && form"
       [formGroup]="form"
