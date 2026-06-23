@@ -52,20 +52,4 @@ export class TodoAddComponent {
       error: () => alert('Failed to create todo'),
     });
   }
-
-  // submit(): void {
-  //   if (this.form.invalid) {
-  //     this.form.markAllAsTouched();
-  //     return;
-  //   }
-
-  //   const todo: Todo = {
-  //     id: 0,
-  //     ...this.form.value,
-  //   };
-
-  //   this.todoService.addTodo(todo);
-  //   this.form.reset();
-  //   this.router.navigate(['/todos']);
-  // }
 }

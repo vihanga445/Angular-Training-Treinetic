@@ -39,12 +39,4 @@ export class TodoListComponent {
       error: () => alert('Failed to delete todo'),
     });
   }
-
-  // get todosList(): Todo[] {
-  //   return this.todoService.getTodos();
-  // }
-
-  // remove(id: number): void {
-  //   this.todoService.removeTodo(id);
-  // }
 }
