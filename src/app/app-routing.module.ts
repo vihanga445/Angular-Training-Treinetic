@@ -18,8 +18,6 @@ const routes: Routes = [
     component: TodoDetailComponent,
     canActivate: [authGuard],
   },
-  { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
-  { path: 'todos', loadChildren: () => import('./todo/todo.module').then(m => m.TodoModule) },
   { path: '**', redirectTo: '/todos' },
 ];
 
